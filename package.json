@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "acorn": "^6.1.1",
-    "acorn-dynamic-import": "^4.0.0",
     "commander": "^2.4.0",
     "falafel": "~1.2.0",
     "glob": "^4.0.6",

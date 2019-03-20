@@ -2,7 +2,6 @@ var os = require('os');
 var falafel = require('falafel');
 var acorn = require('acorn');
 var beautify = require('js-beautify').js_beautify;
-var acornDynamicImport = require('acorn-dynamic-import');
 
 module.exports = convert;
 
@@ -22,7 +21,7 @@ function convert (source, options) {
     var mainCallExpression = null;
 
     var result = falafel(source, {
-        parser: acorn.extend(acornDynamicImport),
+        parser: acorn,
     }, function (node) {
         if (isNamedDefine(node)) {
             throw new Error('Found a named define - this is not supported.');
